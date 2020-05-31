@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 3</title>
+
+        <link rel="stylesheet"
+                  href="https://fonts.googleapis.com/css?family=anaglyph">
+        <style>
+            body {
+                background-color: #95DDD0;
+            }
+            h1 {
+                font-family: 'font-effect-anaglyph', serif;
+                font-size: 50px;
+                color: #3B8183;
+            }
+            h2 {
+                font-family: 'font-effect-anaglyph', serif;
+                font-size: 30px;
+                color: #3B8183;
+            }
+            div {
+                background-color: #fff;
+                margin: 4% 10%;
+                padding: 2%;
+                border-radius: 25px;
+            }
+        </style>
+    </head>
+<body>
+    <center>
+        <h1>Assignment 3</h1>
+        <h2>Lisandro Vazquez</h2>
+    </center>
+    <h2>Execution Details:</h2>
+        Time executing: {{time}}<br>
+        Images clustered: {{n}}
+    <br><br><hr><br>
+
+    {% for clase in cluster %}
+        <div>
+            {% for imag in cluster[clase] %}
+                   <img src='{{ imag }}'>
+            {% endfor %}
+        </div>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
